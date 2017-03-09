@@ -135,11 +135,6 @@ totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
 - (void)associateSessionTaskId:(NSUInteger)sessionTaskId withTaskDelegate:(id <BOXURLSessionTaskDelegate> )taskDelegate;
 
 /**
- * Dessociate a session task with its task delegate so the task delegate will no longer handle callbacks for the task
- */
-- (void)deassociateSessionTaskId:(NSUInteger)sessionTaskId;
-
-/**
  * Asynchronously calls a completion callback with all background upload, and download tasks in a session.
  */
 - (void)pendingBackgroundDownloadUploadSessionTasks:(void (^)(NSArray<NSURLSessionUploadTask *> * _Nonnull uploadTasks, NSArray<NSURLSessionDownloadTask *> * _Nonnull downloadTasks))completion;
